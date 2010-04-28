@@ -1,0 +1,31 @@
+<% title @card.name %>
+<%= link_to 'Main Menu', cardpicker_index_path %>
+<% if @game == 'Start Player' %>
+	 - <%= link_to  "Flip another card!", { :action => :startplayer } %>
+<% end %>
+
+<hr />
+
+<% if @game == 'Dominion' %>
+  <%= image_tag @img %>
+<% else %>
+  <% if File.exist?( RAILS_ROOT + '/public/images/' + @img ) -%>
+    <%= image_tag @img %>
+  <% end -%>
+<% end -%>
+
+<h2><%= @card.name %></h2>
+
+<% if @game == 'Start Player' %>
+	Number: <%= @card.number %>
+<% else %>
+	Cost: <%= @card.cost %>
+<% end %>
+<br />
+<% unless @card.card_type.nil? %>
+Type: <%= @card.card_type %>
+<br />
+<% end %>
+Text: <br />
+<%= @text %>
+

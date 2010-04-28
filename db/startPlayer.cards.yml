@@ -1,0 +1,379 @@
+--- 
+- :type: Default
+  :game: Start Player
+  :number: 101
+  :text: The player who has visited the most countries is the Start Player
+  :name: Traveler
+  :set: Base
+  :id: 1
+- :type: Default
+  :game: Start Player
+  :number: 102
+  :text: The player who has the biggest ears is the Start Player
+  :name: Listener
+  :set: Base
+  :id: 3
+- :type: Default
+  :game: Start Player
+  :number: 103
+  :text: The player who has the most siblings is the Start Player
+  :name: Most Siblings
+  :set: Base
+  :id: 5
+- :type: Default
+  :game: Start Player
+  :number: 104
+  :text: The player who is the shortest is the Start Player
+  :name: Shortest
+  :set: Base
+  :id: 6
+- :type: Default
+  :game: Start Player
+  :number: 105
+  :text: The player who is the oldest is the Start Player
+  :name: Oldest
+  :set: Base
+  :id: 7
+- :type: Default
+  :game: Start Player
+  :number: 106
+  :text: The player who has the loudest voice is the Start Player
+  :name: Booming voice
+  :set: Base
+  :id: 008
+- :type: Default
+  :game: Start Player
+  :number: 107
+  :text: The player who is the tallest is the Start Player
+  :name: Tallest
+  :set: Base
+  :id: 009
+- :type: Default
+  :game: Start Player
+  :number: 108
+  :text: The player who is the youngest is the Start Player
+  :name: Youngest
+  :set: Base
+  :id: 8
+- :type: Default
+  :game: Start Player
+  :number: 109
+  :text: The player whose birthday is next is the Start Player
+  :name: Birthday
+  :set: Base
+  :id: 11
+- :type: Default
+  :game: Start Player
+  :number: 110
+  :text: The player who has the biggest bushiest eyebrows is the Start Player
+  :name: Eyebrows
+  :set: Base
+  :id: 019
+- :type: Default
+  :game: Start Player
+  :number: 111
+  :text: The player who has the biggest feet is the Start Player
+  :name: Steady
+  :set: Base
+  :id: 15
+- :type: Default
+  :game: Start Player
+  :number: 112
+  :text: The player who has the most freckles is the Start Player
+  :name: Dotty
+  :set: Base
+  :id: 18
+- :type: Default
+  :game: Start Player
+  :number: 113
+  :text: The player who has the most letters in their first and last names is the Start Player
+  :name: Form Stretcher
+  :set: Base
+  :id: 22
+- :type: Default
+  :game: Start Player
+  :number: 114
+  :text: The player who has most recently bowled is the Start Player
+  :name: 3 Hole Monty
+  :set: Base
+  :id: 100
+- :type: Default
+  :game: Start Player
+  :number: 115
+  :text: The player who has most recently drank chocolate milk is the Start Player
+  :name: Chocobean
+  :set: Base
+  :id: 101
+- :type: Default
+  :game: Start Player
+  :number: 116
+  :text: The player who owns the game about to be played is the Start Player
+  :name: Owner
+  :set: Base
+  :id: 105
+- :type: Default
+  :game: Start Player
+  :number: 117
+  :text: The player who has the most cats is the Start Player
+  :name: Purrfection
+  :set: Base
+  :id: 106
+- :type: Default
+  :game: Start Player
+  :number: 118
+  :text: The player who owns the most boardgames is the Start Player
+  :name: Most Games
+  :set: Base
+  :id: 108
+- :type: Default
+  :game: Start Player
+  :number: 119
+  :text: The player who drives the smallest car is the Start Player
+  :name: Minicar
+  :set: Base
+  :id: 110
+- :type: Default
+  :game: Start Player
+  :number: 120
+  :text: The player who has the curliest hair is the Start Player
+  :name: Curly
+  :set: Base
+  :id: 111
+- :type: Default
+  :game: Start Player
+  :number: 121
+  :text: The player who has the longest hair is the Start Player
+  :name: Long Hair
+  :set: Base
+  :id: 114
+- :type: Default
+  :game: Start Player
+  :number: 122
+  :text: The player who has the shortest email address is the Start Player
+  :name: Bit Saver
+  :set: Base
+  :id: 116
+- :type: Default
+  :game: Start Player
+  :number: 123
+  :text: The player who is wearing the most makeop is the Start Player
+  :name: Caked On
+  :set: Base
+  :id: 120
+- :type: Default
+  :game: Start Player
+  :number: 124
+  :text: The player to the left of the card flipper is the Start Player
+  :name: Lefty
+  :set: Base
+  :id: 200
+- :type: Default
+  :game: Start Player
+  :number: 125
+  :text: The player to the right of the card flipper is the Start Player
+  :name: Righty
+  :set: Base
+  :id: 201
+- :type: Default
+  :game: Start Player
+  :number: 126
+  :text: The player wearing the fewest articles of clothing is the Start Player
+  :name: Traveling Light
+  :set: Base
+  :id: 202
+- :type: Default
+  :game: Start Player
+  :number: 127
+  :text: The player who is wearing the most white is the Start Player
+  :name: Whitey
+  :set: Base
+  :id: 205
+- :type: Default
+  :game: Start Player
+  :number: 128
+  :text: The player who took a bath or shower the most recently is the Start Player
+  :name: Stench Free
+  :set: Base
+  :id: 207
+- :type: Default
+  :game: Start Player
+  :number: 129
+  :text: The player who has the most buttons is the Start Player
+  :name: Buttoned
+  :set: Base
+  :id: 209
+- :type: Default
+  :game: Start Player
+  :number: 130
+  :text: The player who has the most unbuttoned buttons is the Start Player
+  :name: Unbuttoned
+  :set: Base
+  :id: 211
+- :type: Default
+  :game: Start Player
+  :number: 131
+  :text: The player who was born the closest geographically is the Start Player
+  :name: Native
+  :set: Base
+  :id: 305
+- :type: Default
+  :game: Start Player
+  :number: 132
+  :text: The player who has the fewest number of siblings is the Start Player
+  :name: Only Child
+  :set: Base
+  :id: 308
+- :type: Default
+  :game: Start Player
+  :number: 133
+  :text: The next player to drink something is the Start Player
+  :name: Quench
+  :set: Base
+  :id: 371
+- :type: Default
+  :game: Start Player
+  :number: 134
+  :text: The next player to give money to someone is the Start Player
+  :name: Charity
+  :set: Base
+  :id: 372
+- :type: Default
+  :game: Start Player
+  :number: 135
+  :text: The next player to put something in their mouth is the Start Player
+  :name: Oral Fixation
+  :set: Base
+  :id: 373
+- :type: Default
+  :game: Start Player
+  :number: 136
+  :text: The next player to yodel is the Start Player
+  :name: Yodeler
+  :set: Base
+  :id: 374
+- :type: Default
+  :game: Start Player
+  :number: 137
+  :text: The player who has most recently played chess is the Start Player
+  :name: King Saver
+  :set: Base
+  :id: 407
+- :type: Default
+  :game: Start Player
+  :number: 138
+  :text: The player who owns the most dice is the Start Player
+  :name: Most Dice
+  :set: Base
+  :id: 414
+- :type: Default
+  :game: Start Player
+  :number: 139
+  :text: The player who has most recently finished reading a novel is the Start Player
+  :name: Curled Up
+  :set: Base
+  :id: 421
+- :type: Default
+  :game: Start Player
+  :number: 140
+  :text: The player who has the most pockets is the Start Player
+  :name: Pockets
+  :set: Base
+  :id: 500
+- :type: Default
+  :game: Start Player
+  :number: 141
+  :text: The player who has the longest belt is the Start Player
+  :name: Big Belt
+  :set: Base
+  :id: 504
+- :type: Default
+  :game: Start Player
+  :number: 142
+  :text: The player who has the most keys is the Start Player
+  :name: Keyed In
+  :set: Base
+  :id: 505
+- :type: Default
+  :game: Start Player
+  :number: 143
+  :text: The player who has been closest to the North Pole is the Start Player
+  :name: Santa's Helper
+  :set: Base
+  :id: 600
+- :type: Default
+  :game: Start Player
+  :number: 144
+  :text: The player who has spent the most nights at sea on a boat is the Start Player
+  :name: Scurvy Dog
+  :set: Base
+  :id: 601
+- :type: Default
+  :game: Start Player
+  :number: 145
+  :text: The player who has had the longest hospital stay is the Start Player
+  :name: Critical Condition
+  :set: Base
+  :id: 602
+- :type: Default
+  :game: Start Player
+  :number: 146
+  :text: The player who looks the most like an animated character is the Start Player
+  :name: Drawn Here
+  :set: Base
+  :id: 603
+- :type: Default
+  :game: Start Player
+  :number: 147
+  :text: The next player who makes the loudest non-vocal noise is the Start Player
+  :name: Inhuman
+  :set: Base
+  :id: 671
+- :type: Default
+  :game: Start Player
+  :number: 148
+  :text: The next player who hops on one foot the longest is the Start Player
+  :name: Flamingo
+  :set: Base
+  :id: 672
+- :type: Default
+  :game: Start Player
+  :number: 148
+  :text: The next player who keeps their eyes closed the longest is the Start Player
+  :name: Patience
+  :set: Base
+  :id: 673
+- :type: Default
+  :game: Start Player
+  :number: 150
+  :text: The player who has most recently done yoga is the Start Player
+  :name: Relaxed
+  :set: Base
+  :id: 703
+- :type: Default
+  :game: Start Player
+  :number: 151
+  :text: The player who has most recently eaten ice cream is the Start Player
+  :name: Cold Milk
+  :set: Base
+  :id: 704
+- :type: Default
+  :game: Start Player
+  :number: 152
+  :text: The player who has most recently talked to their mother is the start player
+  :name: Depression
+  :set: Base
+  :id: 707
+- :type: Default
+  :game: Start Player
+  :number: 153
+  :text: The player who has the coolest cell phone is the Start Player
+  :name: Fashion Foner
+  :set: Base
+  :id: 713
+- :type: Default
+  :game: Start Player
+  :number: 154
+  :text: The player who turned over this card is the Start Player
+  :name: Me
+  :set: Base
+  :id: 801

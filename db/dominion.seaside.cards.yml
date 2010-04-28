@@ -1,0 +1,248 @@
+---
+- :cost: 2
+  :set: Seaside
+  :name: Native Village
+  :text: |-
+    Choose one: Set aside the top card of your deck face down on your Native Village mat; or put all the cards from your mat into your hand.
+  
+    You may look at the cards on your mat at any time; return them to your deck at the end of the game.
+  :id: 53
+  :game: Dominion
+  :type: Action
+- :cost: 2
+  :set: Seaside
+  :name: Embargo
+  :text: |-
+    Trash this card.  Put an Embargo token on top of a Supply pile.
+    
+    ---
+    
+    When a player buys a card, he gains a Curse card per Embargo token on that pile.
+  :id: 54
+  :game: Dominion
+  :type: Action
+- :cost: 2
+  :set: Seaside
+  :name: Pearl Diver
+  :text: |-
+    +1 Card
+    +1 Action
+    
+    Look at the bottom of your deck.  You may put it on top.
+  :id: 55
+  :game: Dominion
+  :type: Action
+- :cost: 2
+  :set: Seaside
+  :name: Lighthouse
+  :text: |-
+    +1 Action
+    Now and at the start of your next turn: +1
+    
+    ---
+    
+    While this is in play, when another player plays an Attack card, it doesn't affect you.
+  :id: 56
+  :game: Dominion
+  :type: "Action - Duration"
+- :cost: 2
+  :set: Seaside
+  :name: Haven
+  :text: |-
+    +1 Cards
+    +1 Action
+    
+    Set aside a card from your hand face down.  At the start of your next turn, put it into your hand.
+  :id: 57
+  :game: Dominion
+  :type: "Action - Duration"
+- :cost: 3
+  :set: Seaside
+  :name: Fishing Village
+  :text: |-
+    +2 Actions
+    +1 Coin
+    
+    At the start of your next turn:
+    +1 Action
+    +1 Coin
+  :id: 58
+  :game: Dominion
+  :type: "Action - Duration"
+- :cost: 3
+  :set: Seaside
+  :name: Lookout
+  :text: |-
+    +1 Action
+    
+    Look at the top 3 cards of your deck.  Trash one of them.  Discard one of them.  Put the other one on top of your deck.
+  :id: 59
+  :game: Dominion
+  :type: Action
+- :cost: 3
+  :set: Seaside
+  :name: Ambassador
+  :text: Reveal a card from your hand.  Return up to 2 copies of it from your hand to the supply.  Then each other player gains a copy of it.
+  :id: 60
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 3
+  :set: Seaside
+  :name: Warehouse
+  :text: |-
+    +3 Cards
+    +1 Action
+    
+    Discard 3 cards.
+  :id: 61
+  :game: Dominion
+  :type: Action
+- :cost: 3
+  :set: Seaside
+  :name: Smugglers
+  :text: Gain a copy of a card costing up to 6 Coin that the player to your right gained on his last turn.
+  :id: 62
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Seaside
+  :name: Navigator
+  :text: |-
+    +2 Coin
+    
+    Look at the top 5 cards of your deck.  Either discard all of them, or put them back on top of your deck in any order.
+  :id: 63
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Seaside
+  :name: Cutpurse
+  :text: |-
+    +2 Coin
+    
+    Each other player discards a Copper card (or reveals a hand with no Copper).
+  :id: 64
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 4
+  :set: Seaside
+  :name: Salvager
+  :text: |-
+    +1 Buy
+    
+    Trash a card from your hand.
+    + Coin equal to its cost.
+  :id: 65
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Seaside
+  :name: Pirate Ship
+  :text: |-
+    Choose one: Each other player reveals the top 2 cards of his deck, trashes a revealed Treasure that you choose, discards the rest, and if anyone trashed a Treasure you take a Coin token; or, +1 Coin per Coin token you've taken with Pirate Ships this game.
+  :id: 66
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 4
+  :set: Seaside
+  :name: Island
+  :text: |-
+    Set aside this and another card from your hand.  Return them to your deck at the end of the game.
+    
+    ---
+    
+    2 VP
+  :id: 67
+  :game: Dominion
+  :type: "Action - Victory"
+- :cost: 4
+  :set: Seaside
+  :name: Treasure Map
+  :text: Trash this and another copy of Treasure Map from your hand.  If you do trash two Treasure Maps, gain 4 Gold cards, putting them on top of your deck.
+  :id: 68
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Seaside
+  :name: Sea Hag
+  :text: Each other player discards the top card of his deck, then gains a Curse card, putting it on top of his deck.
+  :id: 69
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 4
+  :set: Seaside
+  :name: Caravan
+  :text: |-
+    +1 Card
+    +1 Action
+    
+    At the start of your next turn, +1 Card.
+  :id: 70
+  :game: Dominion
+  :type: "Action - Duration"
+- :cost: 5
+  :set: Seaside
+  :name: Bazaar
+  :text: |-
+    +1 Card
+    +2 Actions
+    +1 Coin
+  :id: 71
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Seaside
+  :name: Explorer
+  :text: You may reveal a Province card from your hand.  If you do, gain a Gold card, putting it into your hand.  Otherwise, gain a Silver card, putting it into your hand.
+  :id: 72
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Seaside
+  :name: Treasury
+  :text: |-
+    +1 Card
+    +1 Action
+    +1 Coin
+    
+    ---
+    
+    When you discard this from play, if you didn't buy a Victory card this turn, you may put this on top of your deck.
+  :id: 73
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Seaside
+  :name: Ghost Ship
+  :text: |-
+    +2 Cards
+    
+    Each other player with 4 or more cards in hand puts cards from his hand on top of his deck until he has 3 cards in his hand.
+  :id: 74
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 5
+  :set: Seaside
+  :name: Outpost
+  :text: You only draw 3 cards (instead of 5) in this turn's Clean-up phase.  Take an extra turn after this one.  This can't cause you to take more than two consecutive turns.
+  :id: 75
+  :game: Dominion
+  :type: "Action - Duration"
+- :cost: 5
+  :set: Seaside
+  :name: Merchant Ship
+  :text: |-
+    Now and at the start of your next turn:
+    
+    +2 Cards
+    +1 Buy
+  :id: 76
+  :game: Dominion
+  :type: "Action - Duration"
+- :cost: 5
+  :set: Seaside
+  :name: Tactician
+  :text: Discard your hand.  If you discarded any cards this way, then at the start of your next turn, +5 Cards, +1 Buy, and +1 Action.
+  :id: 77
+  :game: Dominion
+  :type: "Action - Duration"

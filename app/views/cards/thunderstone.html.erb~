@@ -1,0 +1,67 @@
+<% title @game %>
+<%= link_to 'Main Menu', cardpicker_index_path %>
+ - <%= link_to 'Shuffle and Pick Again', thunderstone_cardpicker_path %>
+
+<hr />
+
+<h3>Monsters:</h3>
+<ul style="list-style-type: none;">
+<% for card in @cards.select { |card| card.card_type =~ /Monster/ } %>
+	<li>
+    <%= link_to card.name, cardpicker_path( card ) %>
+  </li>
+<% end %>
+</ul>
+<hr />
+
+<h3>Heroes:</h3>
+<ul style="list-style-type: none;">
+<% for card in @cards.select { |card| card.card_type =~ /Hero/ } %>
+	<li>
+    <%= link_to card.name, cardpicker_path( card ) %>
+  </li>
+<% end %>
+</ul>
+<hr />
+
+<h3>Village Cards:</h3>
+<ul style="list-style-type: none;">
+  <% if @sort_type == 'cost' %>
+    <% for card in @cards.select { |card| card.card_type =~ /Village/ }.sort_by { |a| [a.cost, a.name] } %>
+	    <li>
+        <%= link_to card.name, cardpicker_path( card ) %>
+        (<%= card.cost %>)
+      </li>
+    <% end %>
+  <% else %>
+    <% for card in @cards.select { |card| card.card_type =~ /Village/ }.sort { |a,b| a.name <=> b.name } %>
+	    <li>
+        <%= link_to card.name, cardpicker_path( card ) %>
+        (<%= card.cost %>)
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+<hr />
+
+<% form_tag do %>
+
+<h3>Set Options:</h3>
+  <% for set in @sets %>
+    <%= check_box_tag( "sets_to_use[#{set}]", "use", @sets_to_use.include?( set )) %>
+    <%= label_tag( "sets_to_use[#{set}]", "#{set}" ) %><br />
+  <% end %>
+  <br />
+  <%= submit_tag 'Change Options' %>
+
+<hr />
+<h3>Village Cards Sort Options:</h3>
+
+  <%= radio_button_tag( :sort_type, "alpha", @sort_type == 'alpha' ) %>
+    <%= label_tag( :sort_type_alpha, "Sort Alphabetically" ) %><br />
+  <%= radio_button_tag( :sort_type, "cost", @sort_type == 'cost' ) %>
+    <%= label_tag( :sort_type_cost, "Sort by Cost" ) %><br />
+  <br />
+  <%= submit_tag 'Change Options' %>
+
+<% end %>

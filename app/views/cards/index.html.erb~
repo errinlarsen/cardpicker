@@ -1,0 +1,8 @@
+<% title 'Main Menu' %>
+<h3>Games:</h3>
+
+<ul>
+	<li><%= link_to 'Dominion', dominion_cardpicker_path %></li>
+	<li><%= link_to 'Start Player', startplayer_cardpicker_path %></li>
+</ul>
+

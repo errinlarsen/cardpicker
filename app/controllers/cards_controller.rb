@@ -1,0 +1,187 @@
+class CardsController < ApplicationController
+  def index
+  end
+
+  def dominion
+    if request.get?
+      @game = session[:game] ||= 'Dominion'
+      @sets = Card.find_all_sets_by_game( @game )
+      @sets_to_use = session[:sets_to_use] ||= @sets
+      @randomization = session[:randomization] ||= 'full'
+      @reactions_required = session[:reactions_required] ||= 'no'
+      @oneofeach_required = session[:oneofeach_required] ||= 'no'
+      @sort_type = session[:sort_type] ||= 'alpha'
+    else
+      if session[:game] and session[:game] == params[:game]
+        @game = params[:game]
+        @sets = Card.find_all_sets_by_game( @game )
+        if params[:sets_to_use].nil?
+          @sets_to_use = session[:sets_to_use] = ['Base']
+        else
+          @sets_to_use = session[:sets_to_use] = params[:sets_to_use].keys
+        end
+      else
+        @game = session[:game] = params[:game]
+        @sets = Card.find_all_sets_by_game( @game )
+        @sets_to_use = @sets
+      end
+      @randomization = session[:randomization] = params[:randomization]
+      @reactions_required = session[:reactions_required] = params[:reactions_required]
+      @oneofeach_required = session[:oneofeach_required] = params[:oneofeach_required]
+      @sort_type = session[:sort_type] = params[:sort_type]
+    end
+
+    cards = pick_cards( :game => @game, :num => 10, 
+                        :randomization => @randomization,
+                        :reactions_required => @reactions_required,
+                        :oneofeach_required => @oneofeach_required,
+                        :sets => @sets_to_use )
+	  @cards = sort_cards( @sort_type, cards )
+  end
+
+  def startplayer
+  	card = pick_cards( :game => 'Start Player' ).first
+  	redirect_to cardpicker_path( card )
+  end
+
+  def thunderstone
+    @game = 'Thunderstone'
+    @sets = Card.find_all_sets_by_game( @game )
+    if request.get?
+      @sets_to_use = session[:sets_to_use] ||= @sets
+      @sort_type = session[:sort_type] ||= 'alpha'
+    else
+      if params[:sets_to_use].nil?
+        @sets_to_use = session[:sets_to_use] = ['Base']
+      else
+        @sets_to_use = session[:sets_to_use] = params[:sets_to_use].keys
+      end
+      @sort_type = session[:sort_type] = params[:sort_type]
+    end
+
+    @cards = pick_cards( :game => @game, :sets => @sets_to_use )
+  end
+
+  def show
+	  @card = Card.find( params[:id] )
+    @game = @card.game
+    if @game == 'Dominion'
+      @img = "http://dominion.diehrstraits.com/scans/#{@card.set.downcase}/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+    else
+      @img =  "cards/#{@card.name.gsub( / /, '-' )}.png"
+    end
+	  @text = @card.text.gsub( /\n/, '<br />' ) if @card.text
+  end
+
+private
+  def pick_cards( args={} )
+    args = { :num => 1, :randomization => 'full',
+      :oneofeach_required => 'no', :reactions_required => 'no',
+      :sets => Card.find_all_sets_by_game( args[:game] )}.merge!( args )
+
+    puts args
+
+    deck = Card.find_all_by_game_and_sets( args[:game], args[:sets] )
+
+    case args[:game]
+
+    ## Dominion and it's re-themes
+    when 'Dominion', 'Zombinion'
+      case args[:randomization]
+
+      ## BSW-style set picking is special
+      when 'bsw'
+        if args[:oneofeach_required] == 'yes'
+          two_deck, deck = deck.partition { |card| card.cost == 2 }
+          three_deck, deck = deck.partition { |card| card.cost == 3 }
+          four_deck, deck = deck.partition { |card| card.cost == 4 }
+          five_deck, deck = deck.partition { |card| card.cost == 5 }
+          new_set = [two_deck.shuffle!.shift,
+                     three_deck.shuffle!.shift,
+                     four_deck.shuffle!.shift,
+                     five_deck.shuffle!.shift]
+          low_deck = two_deck + three_deck
+          high_deck = four_deck + five_deck + deck
+          new_set = new_set + low_deck.shuffle!.shift(2) + high_deck.shuffle!.shift(4)
+        else
+          low_deck, high_deck = deck.partition { |card| card.cost <= 3 }
+          new_set = low_deck.shuffle!.shift(4) + high_deck.shuffle!.shift(6)
+        end
+
+      ## Regular (full random) set picking
+      else
+        if args[:oneofeach_required] == 'yes'
+          two_deck, deck = deck.partition { |card| card.cost == 2 }
+          three_deck, deck = deck.partition { |card| card.cost == 3 }
+          four_deck, deck = deck.partition { |card| card.cost == 4 }
+          five_deck, deck = deck.partition { |card| card.cost == 5 }
+          new_set = [two_deck.shuffle!.shift,
+                     three_deck.shuffle!.shift,
+                     four_deck.shuffle!.shift,
+                     five_deck.shuffle!.shift]
+          deck += two_deck + three_deck + four_deck + five_deck
+          new_set = new_set + deck.shuffle!.shift(args[:num]-4)
+        else
+          new_set = deck.shuffle!.shift(args[:num])
+        end
+      end
+
+  	  if args[:reactions_required] == 'yes'
+  	    reactions = Card.find_all_by_game_and_type_and_sets( args[:game], 'Reaction', args[:sets] )
+  	    new_set = check_atk_and_react( :set => new_set, :react => reactions,
+  	                                    :bsw => args[:randomization] == 'bsw',
+  	                                    :oneofeach => args[:oneofeach_required] == 'yes' )
+      end
+
+    ## Thunderstone
+    when 'Thunderstone'
+      heroes_deck = Card.find_all_by_game_and_type_and_sets( args[:game], 'Hero', args[:sets] )
+      monster_deck = Card.find_all_by_game_and_type_and_sets( args[:game], 'Monster', args[:sets] )
+      village_deck = Card.find_all_by_game_and_type_and_sets( args[:game], 'Village', args[:sets] )
+
+      new_set = heroes_deck.shuffle!.shift(4)
+      new_set += monster_deck.shuffle!.shift(3)
+      new_set += village_deck.shuffle!.shift(8)
+
+
+    ## Any other game
+    else
+      new_set = deck.shuffle!.shift(args[:num])
+    end
+
+    new_set
+  end
+
+  def check_atk_and_react( args )
+    set, reactions, bsw, oneofeach = args[:set], args[:react], args[:bsw], args[:oneofeach]
+    if (!set.select { |card| card.card_type =~ /Attack/ }.empty? and set.select { |card| card.card_type =~ /Reaction/ }.empty? )
+      if bsw
+        if oneofeach
+          card_to_replace = set.detect { |card| card.card_type !~ /Attack/ and card.cost == 2 }
+        else
+          card_to_replace = set.detect { |card| card.card_type !~ /Attack/ and card.cost <= 3 }
+        end
+
+      else
+        if oneofeach
+          card_to_replace = set.detect { |card| card.card_type !~ /Attack/ and card.cost == 2 }
+        else
+          card_to_replace = set.detect { |card| card.card_type !~ /Attack/ }
+        end
+      end
+      set.delete( card_to_replace )
+      set << reactions.shuffle!.shift
+    end
+
+    set
+  end
+
+  def sort_cards( sort_type, cards )
+    case sort_type
+      when 'cost' then return cards.sort_by { |a| [a.cost, a.name] }
+      when 'type' then return cards.sort_by { |a| [a.card_type, a.name] }
+      when 'alpha' then return cards.sort { |a,b| a.name <=> b.name }
+    end
+  end
+end
+

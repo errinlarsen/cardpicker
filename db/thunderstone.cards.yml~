@@ -1,0 +1,247 @@
+---
+# These are Thunderstone cards
+- :id: 1
+  :game: Thunderstone
+  :set: Base
+  :name: Amazon
+  :type: Hero
+- :id: 2
+  :game: Thunderstone
+  :set: Base
+  :name: Chalice
+  :type: Hero
+- :id: 3
+  :game: Thunderstone
+  :set: Base
+  :name: Dwarf
+  :type: Hero
+- :id: 4
+  :game: Thunderstone
+  :set: Base
+  :name: Elf
+  :type: Hero
+- :id: 5
+  :game: Thunderstone
+  :set: Base
+  :name: Feayn
+  :type: Hero
+- :id: 6
+  :game: Thunderstone
+  :set: Base
+  :name: Lorigg
+  :type: Hero
+- :id: 7
+  :game: Thunderstone
+  :set: Base
+  :name: Outlands
+  :type: Hero
+- :id: 8
+  :game: Thunderstone
+  :set: Base
+  :name: Redblade
+  :type: Hero
+- :id: 9
+  :game: Thunderstone
+  :set: Base
+  :name: Regian
+  :type: Hero
+- :id: 10
+  :game: Thunderstone
+  :set: Base
+  :name: Selurin
+  :type: Hero
+- :id: 11
+  :game: Thunderstone
+  :set: Base
+  :name: Thyrian
+  :type: Hero
+- :id: 12
+  :game: Thunderstone
+  :set: Base
+  :name: Abyssal
+  :type: Monster
+- :id: 13
+  :game: Thunderstone
+  :set: Base
+  :name: "Doomknight * Humanoid"
+  :type: Monster
+- :id: 14
+  :game: Thunderstone
+  :set: Base
+  :name: Dragon
+  :type: Monster
+- :id: 15
+  :game: Thunderstone
+  :set: Base
+  :name: Enchanted
+  :type: Monster
+- :id: 16
+  :game: Thunderstone
+  :set: Base
+  :name: Humanoid
+  :type: Monster
+- :id: 17
+  :game: Thunderstone
+  :set: Base
+  :name: Ooze
+  :type: Monster
+- :id: 18
+  :game: Thunderstone
+  :set: Base
+  :name: "Undead * Doom"
+  :type: Monster
+- :id: 19
+  :game: Thunderstone
+  :set: Base
+  :name: "Undead * Spirit"
+  :type: Monster
+- :id: 20
+  :game: Thunderstone
+  :set: Base
+  :name: Arcane Energies
+  :type: Village
+  :cost: 2
+  :text: |-
+    DUNGEON: All ATTACKS from Heroes with Weapons become MAGIC ATTACKS.
+    Draw one card.
+- :id: 21
+  :game: Thunderstone
+  :set: Base
+  :name: Banish
+  :type: Village
+  :cost: 4
+  :text: |-
+    DUNGEON: Return one Monster to the bottom of the deck and refill the hall, or rearrange the hall.
+    Destroy one card from your hand.
+    Draw one card.
+- :id: 22
+  :game: Thunderstone
+  :set: Base
+  :name: Barkeep
+  :type: Village
+  :cost: 2
+  :text: |-
+    VILLAGE: You may purchase one additional card this turn.
+    VILLAGE: Destroy this card to gain 2 Gold.
+- :id: 23
+  :game: Thunderstone
+  :set: Base
+  :name: Battle Fury
+  :type: Village
+  :cost: 3
+  :text: DUNGEON: All heroes gain ATTACK \+1.
+- :id: 24
+  :game: Thunderstone
+  :set: Base
+  :name: Feast
+  :type: Village
+  :cost: 5
+  :text: All Heroes gain Strength +3 and ATTACK +1.
+- :id: 25
+  :game: Thunderstone
+  :set: Base
+  :name: Fireball
+  :type: Village
+  :cost: 9
+  :text: MAGIC ATTACK +3
+- :id: 26
+  :game: Thunderstone
+  :set: Base
+  :name: Flaming Sword
+  :type: Village
+  :cost: 5
+  :text: MAGIC ATTACK +3
+- :id: 27
+  :game: Thunderstone
+  :set: Base
+  :name: Goodberries
+  :type: Village
+  :cost: 4
+  :text: One Hero gains Strength +3 and ATTACK becomes MAGIC ATTACK for that Hero.
+- :id: 28
+  :game: Thunderstone
+  :set: Base
+  :name: Hatchet
+  :type: Village
+  :cost: 4
+  :text: ATTACK +3
+- :id: 29
+  :game: Thunderstone
+  :set: Base
+  :name: Lantern
+  :type: Village
+  :cost: 4
+- :id: 30
+  :game: Thunderstone
+  :set: Base
+  :name: Lightstone Gem
+  :type: Village
+  :cost: 6
+- :id: 31
+  :game: Thunderstone
+  :set: Base
+  :name: Magical Aura
+  :type: Village
+  :cost: 4
+  :text: |-
+    DUNGEON: All Weapons become Weight 0.
+    Draw one card.
+- :id: 32
+  :game: Thunderstone
+  :set: Base
+  :name: Pawnbroker
+  :type: Village
+  :cost: 3
+  :text: |-
+    VILLAGE: Destroy any card with a gold value to gain its gold value plus 3 Gold.
+    VILLAGE: Destroy this card to gain 2 Gold.
+- :id: 33
+  :game: Thunderstone
+  :set: Base
+  :name: Polearm
+  :type: Village
+  :cost: 7
+  :text: ATTACK +2, or ATTACK +6 when attached to a Hero with 8 or more Strength.
+- :id: 34
+  :game: Thunderstone
+  :set: Base
+  :name: Short Sword
+  :type: Village
+  :cost: 6
+  :text: ATTACK +4
+- :id: 35
+  :game: Thunderstone
+  :set: Base
+  :name: Spear
+  :type: Village
+  :cost: 4
+  :text: |-
+    ATTACK +2
+    DUNGEON: You may destroy this spear for ATTACK +3 (total +5)
+- :id: 36
+  :game: Thunderstone
+  :set: Base
+  :name: Town Guard
+  :type: Village
+  :cost: 3
+  :text: |-
+    VILLAGE: Draw two cards.
+    VILLAGE: Destroy this card to draw three cards.
+- :id: 37
+  :game: Thunderstone
+  :set: Base
+  :name: Trainer
+  :type: Village
+  :cost: 4
+  :text: |-
+    VILLAGE: Destroy one Militia to gain 2 XP.
+    VILLAGE: Destroy this card to gain 2 Gold.
+- :id: 38
+  :game: Thunderstone
+  :set: Base
+  :name: Warhammer
+  :type: Village
+  :cost: 4
+  :text: |-
+    ATTACK +3
+    Clerics gain ATTACK +3 against Doomknights and Undead 

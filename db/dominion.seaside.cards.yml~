@@ -1,0 +1,449 @@
+---
+- :cost: 6
+  :set: Base
+  :name: Adventurer
+  :text: Reveal cards from your deck until you reveal 2 Treasure cards.  Put those Treasure cards into your hand and discard the other revealed cards.
+  :id: 1
+  :game: Dominion
+  :type: Action
+- :cost: 3
+  :set: Base
+  :name: Workshop
+  :text: Gain a card costing up to 4 coin
+  :id: 2
+  :game: Dominion
+  :type: Action
+- :cost: 2
+  :set: Base
+  :name: Moat
+  :text: |-
+    +2 Cards
+    When another player plays an Attack card, you may reveal this from your hand.  If you do, you are unaffected by that Attack.
+  :id: 3
+  :game: Dominion
+  :type: "Action - Reaction"
+- :cost: 5
+  :set: Base
+  :name: Laboratory
+  :text: |-
+    +2 Cards
+    +1 Action
+  :id: 4
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Smithy
+  :text: +3 Cards
+  :id: 5
+  :game: Dominion
+  :type: Action
+- :cost: 2
+  :set: Base
+  :name: Cellar
+  :text: |-
+    +1 Action
+    Discard any number of cards.  +1 Card per card discarded
+  :id: 6
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Base
+  :name: Library
+  :text: Draw until you have 7 cards in hand.  You may set aside any Action cards drawn this way
+  :id: 7
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Militia
+  :text: |-
+    +2 Coin
+    Each other player discards down to 3 cards in his hand
+  :id: 8
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 4
+  :set: Base
+  :name: Moneylender
+  :text: Trash a Copper card from your hand.  If you do
+  :id: 9
+  :game: Dominion
+  :type: Action
+- :cost: 3
+  :set: Base
+  :name: Village
+  :text: |-
+    +1 Card
+    +2 Actions
+  :id: 10
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Base
+  :name: Council Room
+  :text: |-
+    +4 Cards
+    +1 Buy
+    Each other player draws a card
+  :id: 11
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Bureaucrat
+  :text: Gain a Silver card; put it on top of your deck.  Each other player reveals a Victory card from his hand and puts it on his deck (or reveals a hand with no Victory cards).
+  :id: 12
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 4
+  :set: Base
+  :name: Spy
+  :text: |-
+    +1 Card
+    +1 Action
+    Each player (including you) reveals the top card of his deck and either discards it or puts it back, your choice.
+  :id: 13
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 3
+  :set: Base
+  :name: Chancellor
+  :text: |-
+    +2 Coin
+    You may immediately put your deck into your discard pile.
+  :id: 14
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Base
+  :name: Mine
+  :text: Trash a Treasure card from your hand.  Gain a Treasure card costing up to (3) more; put it into your hand.
+  :id: 15
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Remodel
+  :text: Trash a card from your hand.  Gain a card costing up to 2 coin more than the trashed card.
+  :id: 16
+  :game: Dominion
+  :type: Action
+- :cost: 2
+  :set: Base
+  :name: Chapel
+  :text: Trash up to 4 cards from your hand.
+  :id: 17
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Thief
+  :text: Each other player reveals the top 2 cards of his deck.  If they revealed any Treasure cards
+  :id: 18
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 3
+  :set: Base
+  :name: Woodcutter
+  :text: |-
+    +1 Buy
+    +2 Coin
+  :id: 19
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Base
+  :name: Market
+  :text: |-
+    +1 Card
+    +1 Action
+    +1 Buy
+    +1 Coin
+  :id: 20
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Base
+  :name: Festival
+  :text: |-
+    +2 Actions
+    +1 Buy
+    +2 Coin
+  :id: 21
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Gardens
+  :text: Worth 1 Victory for every 10 cards in your deck (rounded down).
+  :id: 22
+  :game: Dominion
+  :type: Victory
+- :cost: 4
+  :set: Base
+  :name: Throne Room
+  :text: Choose an Action card in your hand.  Play it twice
+  :id: 23
+  :game: Dominion
+  :type: Action
+- :cost: 4
+  :set: Base
+  :name: Feast
+  :text: Trash this card.  Gain a card costing up to 5 coin.
+  :id: 24
+  :game: Dominion
+  :type: Action
+- :cost: 5
+  :set: Base
+  :name: Witch
+  :text: |-
+    +2 Cards
+    Each other player gains a Curse card
+  :id: 25
+  :game: Dominion
+  :type: "Action - Attack"
+- :cost: 4
+  :set: Envoy
+  :text: Reveal the top 5 cards of your deck.  The player to your left chooses one for you to discard.  Draw the rest.
+  :name: Envoy
+  :game: Dominion
+  :type: Action
+  :id: 26
+- :cost: 4
+  :set: Intrigue
+  :text: |-
+    +1 Buy
+    You may discard an Estate card.  If you do, +4 Coin.  Otherwise, gain an Estate card.
+  :name: Baron
+  :game: Dominion
+  :type: Action
+  :id: 27
+- :cost: 4
+  :set: Intrigue
+  :text: |-
+    +1 Buy
+    +1 Coin
+    All cards (including cards in players hands) cost 1 Coin less this turn, but not less than 0 coin.
+  :name: Bridge
+  :game: Dominion
+  :type: Action
+  :id: 28
+- :cost: 4
+  :set: Intrigue
+  :text: |-
+    +2 Coin
+    If you've played 3 or more Actions this turn (counting this): +1 Card, +1 Action
+  :name: Conspirator
+  :game: Dominion
+  :type: Action
+  :id: 29
+- :cost: 4
+  :set: Intrigue
+  :text: Copper produces an extra 1 Coin this turn.
+  :name: Coppersmith
+  :game: Dominion
+  :type: Action
+  :id: 30
+- :cost: 2
+  :set: Intrigue
+  :text: |-
+    +3 Cards
+    Put a card from your hand on top of your deck.
+  :name: Courtyard
+  :game: Dominion
+  :type: Action
+  :id: 31
+- :cost: 5
+  :set: Intrigue
+  :text: Worth 1 Victory Point per Duchy you have.
+  :name: Duke
+  :game: Dominion
+  :type: Victory
+  :id: 32
+- :cost: 5
+  :set: Intrigue
+  :text: |-
+    +1 Card
+    +1 Action
+    1 Victory Point
+  :name: Great Hall
+  :game: Dominion
+  :type: "Action - Victory"
+  :id: 33
+- :cost: 6
+  :set: Intrigue
+  :text: |-
+    2 Coin
+    2 Victory Points
+  :name: Harem
+  :game: Dominion
+  :type: "Treasure - Victory"
+  :id: 34
+- :cost: 4
+  :set: Intrigue
+  :text: |-
+    Gain a card costing up to 4 Coin
+    If it is an...
+    Action card, +1 Action
+    Treasure card, +1 Coin
+    Victory card, +1 Card
+  :name: Ironworks
+  :game: Dominion
+  :type: Action
+  :id: 35
+- :cost: 3
+  :set: Intrigue
+  :text: |-
+    +2 Cards
+    Each player passes a card from his hand to the left at once.  Then you may trash a card from your hand.
+  :name: Masquerade
+  :game: Dominion
+  :type: Action
+  :id: 36
+- :cost: 4
+  :set: Intrigue
+  :text: |-
+    +1 Card
+    +2 Actions
+    You may trash this card immediately.  If you do, +2 Coin.
+  :name: Mining Village
+  :game: Dominion
+  :type: Action
+  :id: 37
+- :cost: 5
+  :set: Intrigue
+  :text: |-
+    +1 Action
+    Choose one: +2 Coin, or discard your hand, +4 Cards, and each other player with at least 5 cards in hand discards his hand and draws 4 cards.
+  :name: Minion
+  :game: Dominion
+  :type: "Action - Attack"
+  :id: 38
+- :cost: 6
+  :set: Intrigue
+  :text: |-
+    Choose one: +3 Cards or +2 Actions.
+    2 Victory Points
+  :name: Nobles
+  :game: Dominion
+  :type: "Action - Victory"
+  :id: 39
+- :cost: 2
+  :set: Intrigue
+  :text: |-
+    Choose two: +1 Card; +1 Action; +1 Buy; +1 Coin.
+    (The choices must be different.)
+  :name: Pawn
+  :game: Dominion
+  :type: Action
+  :id: 40
+- :cost: 5
+  :set: Intrigue
+  :text: Each other player reveals cards from the top of his deck until revealing one costing 3 Coin or more.  He trashes that card and may gain a card costing at most 2 Coin less than it.  He discards the other revealed cards.
+  :name: Saboteur
+  :game: Dominion
+  :type: "Action - Attack"
+  :id: 41
+- :cost: 4
+  :set: Intrigue
+  :text: |-
+    +1 Action
+    Reveal the top 4 cards of your deck.  Put the revealed Victory cards into your hand.  Put the other cards on top of your deck in any order.
+  :name: Scout
+  :game: Dominion
+  :type: Action
+  :id: 42
+- :cost: 2
+  :set: Intrigue
+  :text: |-
+    Discard any number of cards.  +1 Coin per card discarded.
+    When another player plays an Attack card, you may reveal this from your hand.  If you do, +2 Cards, then put 2 cards from your hand on top of your deck.
+  :name: Secret Chamber
+  :game: Dominion
+  :type: "Action - Reaction"
+  :id: 43
+- :cost: 3
+  :set: Intrigue
+  :text: |-
+    +2 Actions
+    Reveal your hand.  If you have no Action cards in hand, +2 Cards.
+  :name: Shanty Town
+  :game: Dominion
+  :type: Action
+  :id: 44
+- :cost: 3
+  :set: Intrigue
+  :text: "Chose one: +2 Cards; or +2 Coin; or trash 2 cards from your hand."
+  :name: Steward
+  :game: Dominion
+  :type: Action
+  :id: 45
+- :cost: 3
+  :set: Intrigue
+  :text: |-
+    +2 Coin
+    Each other player trashes the top card of his deck and gains a card with the same cost tha tyou choose.
+  :name: Swindler
+  :game: Dominion
+  :type: "Action - Attack"
+  :id: 46
+- :cost: 5
+  :set: Intrigue
+  :text: |-
+    +3 Cards
+    Each other player chooses one: he discards 2 cards, or he gains a Curse card, putting it in his hand.
+  :name: Torturer
+  :game: Dominion
+  :type: "Action - Attack"
+  :id: 47
+- :cost: 5
+  :set: Intrigue
+  :text: Trash 2 cards from your hand.  If you do, gain a Silver card; put it into your hand.
+  :name: Trading Post
+  :game: Dominion
+  :type: Action
+  :id: 48
+- :cost: 5
+  :set: Intrigue
+  :text: |-
+    The player to your left reveals then discards the top 2 cards of his deck.  For each differently named card revealed, if it is an...
+    Action Card, +2 Actions
+    TreasureCard, +2 Coin
+    Victory Card, +2 Cards
+  :name: Tribute
+  :game: Dominion
+  :type: Action
+  :id: 49
+- :cost: 5
+  :set: Intrigue
+  :text: |-
+    +1 Card
+    +1 Action
+    Trash a card from your hand.  Gain a card costing 1 Coin more than it.
+  :name: Upgrade
+  :game: Dominion
+  :type: Action
+  :id: 50
+- :cost: 3
+  :set: Intrigue
+  :text: |-
+    +1 Card
+    +1 Action
+    Name a card.  Reveal the top card of your deck.  It it's the named card, put it into your hand.
+  :name: Wishing Well
+  :game: Dominion
+  :type: Action
+  :id: 51
+- :cost: 3
+  :set: Black Market
+  :text: |-
+    +2 Coin
+    Reveal the top 3 cards of the Black Market deck.  You may buy one of them immediately.  Place the unbought cards on the bottom of the Black Market deck in any order.
+
+    (Before the game, make a Black Market deck out of one copy of each Kingdom card not in the supply.)
+  :name: Black Market
+  :game: Dominion
+  :type: Action
+  :id: 52
+

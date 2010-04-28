@@ -1,0 +1,65 @@
+<% title @game %>
+<%= link_to 'Main Menu', cardpicker_index_path %>
+ - <%= link_to 'Shuffle and Pick Again', dominion_cardpicker_path %>
+
+<hr />
+
+<ul style="list-style-type: none;">
+<% for card in @cards %>
+	<li>
+    <%= image_tag "#{card.card_type}.png", :style => "vertical-align: text-bottom" %>
+    <%= image_tag "#{card.cost}.png", :style => "vertical-align: text-bottom" %>
+    <%= link_to card.name, cardpicker_path( card ) %>
+  </li>
+<% end %>
+<% if @cards.length < 10 %>
+  <li>Perhaps you forgot to add a main set?</li>
+<% end %>
+</ul>
+
+<hr />
+
+<% form_tag do %>
+<h3>Set Options:</h3>
+
+  <%= radio_button_tag( :game, "Dominion", @game == 'Dominion' ) %>
+    <%= label_tag( :game_dom, "Dominion" ) %><br />
+  <%= radio_button_tag( :game, "Zombinion", @game == 'Zombinion' ) %>
+    <%= label_tag( :game_zom, "Zombinion" ) %><br />
+
+  <% for set in @sets %>
+    <%= check_box_tag( "sets_to_use[#{set}]", "use", @sets_to_use.include?( set )) %>
+    <%= label_tag( "sets_to_use[#{set}]", "#{set}" ) %><br />
+  <% end %>
+  <br />
+  <%= submit_tag 'Change Options' %>
+
+<hr />
+<h3>Randomization Options:</h3>
+
+  <%= radio_button_tag( :randomization, "full", @randomization == 'full' ) %>
+    <%= label_tag( :randomization_full, "Full Randomization" ) %><br />
+  <%= radio_button_tag( :randomization, "bsw", @randomization == 'bsw' ) %>
+    <%= label_tag( :randomization_bsw, "BSW-style Randomization" ) %><br />
+  <br />
+  <%= check_box_tag( "reactions_required", "yes", @reactions_required == 'yes' ) %>
+    <%= label_tag( "reactions_required", "Require Reaction cards for any Attack cards" ) %><br />
+  <%= check_box_tag( "oneofeach_required", "yes", @oneofeach_required == 'yes' ) %>
+    <%= label_tag( "oneofeach_required", "Require at least one 2, 3, 4, and 5 cost cards" ) %><br />
+  <br />
+  <%= submit_tag 'Change Options' %>
+
+<hr />
+<h3>Sort Options:</h3>
+
+  <%= radio_button_tag( :sort_type, "alpha", @sort_type == 'alpha' ) %>
+    <%= label_tag( :sort_type_alpha, "Sort Alphabetically" ) %><br />
+  <%= radio_button_tag( :sort_type, "cost", @sort_type == 'cost' ) %>
+    <%= label_tag( :sort_type_cost, "Sort by Cost" ) %><br />
+  <%= radio_button_tag( :sort_type, "type", @sort_type == 'type' ) %>
+    <%= label_tag( :sort_type_type, "Sort by Card Type" ) %><br />
+  <br />
+  <%= submit_tag 'Change Options' %>
+
+<% end %>
+

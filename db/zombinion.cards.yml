@@ -1,0 +1,397 @@
+---
+- :cost: 6
+  :set: Base
+  :text: Reveal cards from your deck until you reveal 2 Aim cards.  Put those Aim cards into your hand and discard the other revealed cards.
+  :name: 1 in the Chamber
+  :game: Zombinion
+  :id: 1
+- :cost: 3
+  :set: Base
+  :text: Gain a card costing up to 4 aim
+  :name: Ammo Box
+  :game: Zombinion
+  :id: 2
+- :cost: 2
+  :set: Base
+  :text: |-
+    +2 Cards
+    When another player plays an Attack card, you may reveal this from your hand.  If you do, you are unaffected by that Attack.
+  :name: Barricade
+  :game: Zombinion
+  :id: 3
+- :cost: 5
+  :set: Base
+  :text: |-
+    +2 Cards
+    +1 Action
+  :name: Courage
+  :game: Zombinion
+  :id: 4
+- :cost: 4
+  :set: Base
+  :text: +3 Cards
+  :name: Cunning
+  :game: Zombinion
+  :id: 5
+- :cost: 2
+  :set: Base
+  :text: |-
+    +1 Action
+    Discard any number of cards.  +1 Card per card discarded
+  :name: Decoy
+  :game: Zombinion
+  :id: 6
+- :cost: 5
+  :set: Base
+  :text: Draw until you have 7 cards in hand.  You may set aside any Action cards drawn this way
+  :name: Hide
+  :game: Zombinion
+  :id: 7
+- :cost: 4
+  :set: Base
+  :text: |-
+    +2 Aim
+    Each other player discards down to 3 cards in his hand
+  :name: Higher Ground
+  :game: Zombinion
+  :id: 8
+- :cost: 4
+  :set: Base
+  :text: Trash a Copper card from your hand.  If you do
+  :name: Hollow Points
+  :game: Zombinion
+  :id: 9
+- :cost: 3
+  :set: Base
+  :text: |-
+    +1 Card
+    +2 Actions
+  :name: Maverick
+  :game: Zombinion
+  :id: 10
+- :cost: 5
+  :set: Base
+  :text: |-
+    +4 Cards
+    +1 Target
+    Each other player draws a card
+  :name: Molotov Cocktail
+  :game: Zombinion
+  :id: 11
+- :cost: 4
+  :set: Base
+  :text: Gain a Slug card; put it on top of your deck.  Each other player reveals a Zombie card from his hand and puts it on his deck (or reveals a hand with no Zombie cards).
+  :name: Quick Escape
+  :game: Zombinion
+  :id: 12
+- :cost: 4
+  :set: Base
+  :text: |-
+    +1 Card
+    +1 Action
+    Each player (including you) reveals the top card of his deck and either discards it or puts it back, your choice.
+  :name: Recon
+  :game: Zombinion
+  :id: 13
+- :cost: 3
+  :set: Base
+  :text: |-
+    +2 Aim
+    You may immediately put your deck into your discard pile.
+  :name: Regroup
+  :game: Zombinion
+  :id: 14
+- :cost: 5
+  :set: Base
+  :text: Trash an Aim card from your hand.  Gain an Aim card costing up to 3 Aim more; put it into your hand.
+  :name: Reload
+  :game: Zombinion
+  :id: 15
+- :cost: 4
+  :set: Base
+  :text: Trash a card from your hand.  Gain a card costing up to 2 Aim  more than the trashed card.
+  :name: Restock
+  :game: Zombinion
+  :id: 16
+- :cost: 2
+  :set: Base
+  :text: Trash up to 4 cards from your hand.
+  :name: Sacrifice
+  :game: Zombinion
+  :id: 17
+- :cost: 4
+  :set: Base
+  :text: Each other player reveals the top 2 cards of his deck.  If they revealed any Aim cards
+  :name: Scavenger
+  :game: Zombinion
+  :id: 18
+- :cost: 3
+  :set: Base
+  :text: |-
+    +1 Target
+    +2 Aim
+  :name: Shotgun
+  :game: Zombinion
+  :id: 19
+- :cost: 5
+  :set: Base
+  :text: |-
+    +1 Card
+    +1 Action
+    +1 Target
+    +1 Aim
+  :name: Sidekick
+  :game: Zombinion
+  :id: 20
+- :cost: 5
+  :set: Base
+  :text: |-
+    +2 Actions
+    +1 Target
+    +2 Aim
+  :name: Stick Together
+  :game: Zombinion
+  :id: 21
+- :cost: 4
+  :set: Base
+  :text: Worth 1 VP for every 10 cards in your deck (rounded down).
+  :name: Survivors
+  :game: Zombinion
+  :id: 22
+- :cost: 4
+  :set: Base
+  :text: Choose an Action card in your hand.  Play it twice
+  :name: Tactics
+  :game: Zombinion
+  :id: 23
+- :cost: 4
+  :set: Base
+  :text: Trash this card.  Gain a card costing up to 5 Aim.
+  :name: Weapon's Cache
+  :game: Zombinion
+  :id: 24
+- :cost: 5
+  :set: Base
+  :text: |-
+    +2 Cards
+    Each other player gains an Infection card.
+  :name: Zombie Swarm
+  :game: Zombinion
+  :id: 25
+- :cost: 4
+  :set: Ham Radio
+  :text: Reveal the top 5 cards of your deck.  The player to your left chooses one for you to discard.  Draw the rest.
+  :name: Ham Radio
+  :game: Zombinion
+  :id: 26
+- :cost: 4
+  :set: Entrails
+  :text: |-
+    +1 Buy
+    You may discard an Estate card.  If you do, +4 Coin.  Otherwise, gain an Estate card.
+  :name: Baron
+  :game: Zombinion
+  :id: 27
+- :cost: 4
+  :set: Entrails
+  :text: |-
+    +1 Buy
+    +1 Coin
+    All cards (including cards in players hands) cost 1 Coin less this turn, but not less than 0 coin.
+  :name: Bridge
+  :game: Zombinion
+  :id: 28
+- :cost: 4
+  :set: Entrails
+  :text: |-
+    +2 Coin
+    If you've played 3 or more Actions this turn (counting this): +1 Card, +1 Action
+  :name: Conspirator
+  :game: Zombinion
+  :id: 29
+- :cost: 4
+  :set: Entrails
+  :text: Copper produces an extra 1 Coin this turn.
+  :name: Coppersmith
+  :game: Zombinion
+  :id: 30
+- :cost: 2
+  :set: Entrails
+  :text: |-
+    +3 Cards
+    Put a card from your hand on top of your deck.
+  :name: Courtyard
+  :game: Zombinion
+  :id: 31
+- :cost: 5
+  :set: Entrails
+  :text: Worth 1 Victory Point per Duchy you have.
+  :name: Duke
+  :game: Zombinion
+  :id: 32
+- :cost: 5
+  :set: Entrails
+  :text: |-
+    +1 Card
+    +1 Action
+    1 Victory Point
+  :name: Great Hall
+  :game: Zombinion
+  :id: 33
+- :cost: 6
+  :set: Entrails
+  :text: |-
+    2 Coin
+    2 Victory Points
+  :name: Harem
+  :game: Zombinion
+  :id: 34
+- :cost: 4
+  :set: Entrails
+  :text: |-
+    Gain a card costing up to 4 Coin
+    If it is an...
+    Action card, +1 Action
+    Treasure card, +1 Coin
+    Victory card, +1 Card
+  :name: Ironworks
+  :game: Zombinion
+  :id: 35
+- :cost: 3
+  :set: Entrails
+  :text: |-
+    +2 Cards
+    Each player passes a card from his hand to the left at once.  Then you may trash a card from your hand.
+  :name: Masquerade
+  :game: Zombinion
+  :id: 36
+- :cost: 4
+  :set: Entrails
+  :text: |-
+    +1 Card
+    +2 Actions
+    You may trash this card immediately.  If you do, +2 Coin.
+  :name: Mining Town
+  :game: Zombinion
+  :id: 37
+- :cost: 5
+  :set: Entrails
+  :text: |-
+    +1 Action
+    Choose one: +2 Coin, or discard your hand, +4 Cards, and each other player with at least 5 cards in hand discards his hand and draws 4 cards.
+  :name: Minion
+  :game: Zombinion
+  :id: 38
+- :cost: 6
+  :set: Entrails
+  :text: |-
+    Choose one: +3 Cards or +2 Actions.
+    2 Victory Points
+  :name: Nobles
+  :game: Zombinion
+  :id: 39
+- :cost: 2
+  :set: Entrails
+  :text: |-
+    Choose two: +1 Card; +1 Action; +1 Buy; +1 Coin.
+    (The choices must be different.)
+  :name: Pawn
+  :game: Zombinion
+  :id: 40
+- :cost: 5
+  :set: Entrails
+  :text: Each other player reveals cards from the top of his deck until revealing one costing 3 Coin or more.  He trashes that card and may gain a card costing at most 2 Coin less than it.  He discards the other revealed cards.
+  :name: Saboteur
+  :game: Zombinion
+  :id: 41
+- :cost: 4
+  :set: Entrails
+  :text: |-
+    +1 Action
+    Reveal the top 4 cards of your deck.  Put the revealed Victory cards into your hand.  Put the other cards on top of your deck in any order.
+  :name: Scout
+  :game: Zombinion
+  :id: 42
+- :cost: 2
+  :set: Entrails
+  :text: |-
+    Discard any number of cards.  +1 Coin per card discarded.
+    When another player plays an Attack card, you may reveal this from your hand.  If you do, +2 Cards, then put 2 cards from your hand on top of your deck.
+  :name: Secret Chamber
+  :game: Zombinion
+  :id: 43
+- :cost: 3
+  :set: Entrails
+  :text: |-
+    +2 Actions
+    Reveal your hand.  If you have no Action cards in hand, +2 Cards.
+  :name: Shanty Town
+  :game: Zombinion
+  :id: 44
+- :cost: 3
+  :set: Entrails
+  :text: "Chose one: +2 Cards; or +2 Coin; or trash 2 cards from your hand."
+  :name: Steward
+  :game: Zombinion
+  :id: 45
+- :cost: 3
+  :set: Entrails
+  :text: |-
+    +2 Coin
+    Each other player trashes the top card of his deck and gains a card with the same cost tha tyou choose.
+  :name: Swindler
+  :game: Zombinion
+  :id: 46
+- :cost: 5
+  :set: Entrails
+  :text: |-
+    +3 Cards
+    Each other player chooses one: he discards 2 cards, or he gains a Curse card, putting it in his hand.
+  :name: Torturer
+  :game: Zombinion
+  :id: 47
+- :cost: 5
+  :set: Entrails
+  :text: Trash 2 cards from your hand.  If you do, gain a Silver card; put it into your hand.
+  :name: Trading Post
+  :game: Zombinion
+  :id: 48
+- :cost: 5
+  :set: Entrails
+  :text: |-
+    The player to your left reveals then discards the top 2 cards of his deck.  For each differently named card revealed, if it is an...
+    Action Card, +2 Actions
+    TreasureCard, +2 Coin
+    Victory Card, +2 Cards
+  :name: Tribute
+  :game: Zombinion
+  :id: 49
+- :cost: 5
+  :set: Entrails
+  :text: |-
+    +1 Card
+    +1 Action
+    Trash a card from your hand.  Gain a card costing 1 Coin more than it.
+  :name: Upgrade
+  :game: Zombinion
+  :id: 50
+- :cost: 3
+  :set: Entrails
+  :text: |-
+    +1 Card
+    +1 Action
+    Name a card.  Reveal the top card of your deck.  It it's the named card, put it into your hand.
+  :name: Wishing Well
+  :game: Zombinion
+  :id: 51
+- :cost: 3
+  :set: Alternate Path
+  :text: |-
+    +2 Aim
+    Reveal the top 3 cards of the Passage deck.  You may target one of them immediately.  Place the unacquired cards on the bottom of the Passage deck in any order.
+
+    (Before the game, make a Passage deck out of one copy of each Plan card not in the supply.)
+  :name: Alternate Path
+  :game: Zombinion
+  :id: 52
+
