@@ -66,7 +66,12 @@ class CardsController < ApplicationController
 	  @card = Card.find( params[:id] )
     @game = @card.game
     if @game == 'Dominion'
-      @img = "http://dominion.diehrstraits.com/scans/#{@card.set.downcase}/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+      if @card.set == 'Envoy' or @card.set == 'Black Market'
+        @img = "http://dominion.diehrstraits.com/scans/promo/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+      else
+        @img = "http://dominion.diehrstraits.com/scans/#{@card.set.downcase}/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+      end
+      
     else
       @img =  "cards/#{@card.name.gsub( / /, '-' )}.png"
     end

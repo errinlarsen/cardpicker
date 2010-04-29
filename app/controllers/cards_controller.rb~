@@ -65,7 +65,7 @@ class CardsController < ApplicationController
   def show
 	  @card = Card.find( params[:id] )
     @game = @card.game
-    if @game = 'Dominion'
+    if @game == 'Dominion'
       @img = "http://dominion.diehrstraits.com/scans/#{@card.set.downcase}/#{@card.name.downcase.gsub( / /, '' )}.jpg"
     else
       @img =  "cards/#{@card.name.gsub( / /, '-' )}.png"
