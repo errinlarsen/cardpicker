@@ -1,31 +1,46 @@
 <% title @card.name %>
-<%= link_to 'Main Menu', cardpicker_index_path %>
-<% if @game == 'Start Player' %>
-	 - <%= link_to  "Flip another card!", { :action => :startplayer } %>
-<% end %>
 
-<hr />
+<div id="topbar"> 
+	<div id="leftnav">
+	  <%= link_to image_tag( 'home.png' ), cardpicker_index_path %>
+	  <% unless @game == 'Start Player' %>
+	    <%= link_to 'Back', :back %>
+	  <% end %>
+	</div> 
+	<div id="title">Card Picker</div>
+</div>
 
-<% if @game == 'Dominion' %>
-  <%= image_tag @img %>
-<% else %>
-  <% if File.exist?( RAILS_ROOT + '/public/images/' + @img ) -%>
-    <%= image_tag @img %>
-  <% end -%>
-<% end -%>
+<div id="tributton">
+  <div class="links">
+    <%= tributton_links @game %>
+  </div>
+</div>
 
-<h2><%= @card.name %></h2>
-
-<% if @game == 'Start Player' %>
-	Number: <%= @card.number %>
-<% else %>
-	Cost: <%= @card.cost %>
-<% end %>
-<br />
-<% unless @card.card_type.nil? %>
-Type: <%= @card.card_type %>
-<br />
-<% end %>
-Text: <br />
-<%= @text %>
+<div id="content">
+  <% if @game == 'Start Player' %>
+    <% form_tag( :action => :startplayer, :method => :get ) do %>
+      <ul class="pageitem">
+        <li class="button">
+          <%= submit_tag  "Flip another card!" %>
+        </li>
+      </ul>
+    <% end %>
+  <% end %>
+  
+  <ul class="pageitem">
+    <li class="textbox">        
+      <span class="header"><%= @card.name %></span>
+      <p><%= @text %></p>
+    </li>
+  </ul>
+  
+  <% if @game == 'Dominion' %>
+    <%= image_tag @img, :class => 'center' %>
+  <% else %>
+    <% if File.exist?( RAILS_ROOT + '/public/images/' + @img ) %>            
+      <%= image_tag @img, :class => 'center' %>
+    <% end %>
+  <% end %>       
+  
+</div>
 

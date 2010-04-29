@@ -1,22 +1,51 @@
 <% title @game %>
-<%= link_to 'Games', cardpicker_index_path %> |
-<%= link_to 'Options', dominion_options_cardpicker_path %>
-<hr />
-<%= link_to 'Shuffle and Pick Again', dominion_cardpicker_path %>
-<hr />
 
-<ul style="list-style-type: none;">
-<% for card in @cards %>
-	<li>
-    <%= image_tag "#{card.card_type}.png", :style => "vertical-align: text-bottom" %>
-    <%= image_tag "#{card.cost}.png", :style => "vertical-align: text-bottom" %>
-    <%= link_to card.name, cardpicker_path( card ) %>
-  </li>
-<% end %>
-<% if @cards.length < 10 %>
-  <li>Perhaps you forgot to add a main set?</li>
-<% end %>
-</ul>
+<div id="topbar"> 
+	<div id="leftnav">
+	  <%= link_to image_tag( 'home.png' ), cardpicker_index_path %>
+	</div> 
+	<div id="title">Card Picker</div>
+	<div id="rightnav">
+    <%= link_to 'Options', dominion_options_cardpicker_path %>
+  </div>	  
+</div>
 
-<hr />
+<div id="tributton">
+  <div class="links">
+    <%= tributton_links @game %>
+  </div>
+</div>
+
+<div id="content">
+  
+  <% form_tag( :action => :dominion, :method => :get ) do %>
+    <ul class="pageitem">
+      <li class="button">
+        <%= submit_tag  "Shuffle and Pick Again" %>
+      </li>
+    </ul>
+  <% end %>
+  
+  <span class="graytitle">Kingdom Cards</span>  
+  <ul class="pageitem">
+  <% for card in @cards %>
+      <li class="menu">
+    	  <% link_to( cardpicker_path( card )) do %>
+        <%= image_tag "#{card.cost}.png" %>
+  	    <span class="name"><%= card.name %></span>
+        <span class="comment"><%= card.card_type %></span>
+  	    <span class="arrow" />
+  	  <% end %>
+  	  <!--
+      <%= image_tag "#{card.card_type}.png", :style => "vertical-align: text-bottom" %>
+      <%= image_tag "#{card.cost}.png", :style => "vertical-align: text-bottom" %>
+      <%= link_to card.name, cardpicker_path( card ) %>
+      -->
+    </li>
+  <% end %>
+  <% if @cards.length < 10 %>
+    <li class="textbox">Perhaps you forgot to add a main set?</li>
+  <% end %>
+  </ul>
+</div>
 

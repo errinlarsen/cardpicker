@@ -17,7 +17,8 @@ ActionController::Routing::Routes.draw do |map|
   	  :dominion => [:post, :get],
   	  :dominion_options => [:post, :get],
   	  :startplayer => [:post, :get],
-  	  :thunderstone => [:post, :get]
+  	  :thunderstone => [:post, :get],
+  	  :thunderstone_options => [:post, :get]
   	}
 
   # Sample resource route with options:

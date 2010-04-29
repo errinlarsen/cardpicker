@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  layout 'iwebkit'
+  
   def index
   end
   
@@ -30,8 +32,6 @@ class CardsController < ApplicationController
       @oneofeach_required = session[:oneofeach_required] = params[:oneofeach_required]
       @sort_type = session[:sort_type] = params[:sort_type]
     end
-    
-    redirect_to dominion_cardpicker_path 
   end
 
   def dominion
@@ -89,6 +89,37 @@ class CardsController < ApplicationController
     end
 	  @text = @card.text.gsub( /\n/, '<br />' ) if @card.text
   end
+  
+  def thunderstone_options
+    if request.get?
+      @game = session[:game] ||= 'Dominion'
+      @sets = Card.find_all_sets_by_game( @game )
+      @sets_to_use = session[:sets_to_use] ||= @sets
+      @randomization = session[:randomization] ||= 'full'
+      @reactions_required = session[:reactions_required] ||= 'no'
+      @oneofeach_required = session[:oneofeach_required] ||= 'no'
+      @sort_type = session[:sort_type] ||= 'alpha'
+    else
+      if session[:game] and session[:game] == params[:game]
+        @game = params[:game]
+        @sets = Card.find_all_sets_by_game( @game )
+        if params[:sets_to_use].nil?
+          @sets_to_use = session[:sets_to_use] = ['Base']
+        else
+          @sets_to_use = session[:sets_to_use] = params[:sets_to_use].keys
+        end
+      else
+        @game = session[:game] = params[:game]
+        @sets = Card.find_all_sets_by_game( @game )
+        @sets_to_use = @sets
+      end
+      @randomization = session[:randomization] = params[:randomization]
+      @reactions_required = session[:reactions_required] = params[:reactions_required]
+      @oneofeach_required = session[:oneofeach_required] = params[:oneofeach_required]
+      @sort_type = session[:sort_type] = params[:sort_type]
+    end
+  end
+  
 
 private
   def pick_cards( args={} )

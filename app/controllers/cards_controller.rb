@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  layout 'iwebkit'
+  
   def index
   end
   
@@ -29,8 +31,6 @@ class CardsController < ApplicationController
       @reactions_required = session[:reactions_required] = params[:reactions_required]
       @oneofeach_required = session[:oneofeach_required] = params[:oneofeach_required]
       @sort_type = session[:sort_type] = params[:sort_type]
-    
-      redirect_to dominion_cardpicker_path 
     end
   end
 
@@ -59,6 +59,14 @@ class CardsController < ApplicationController
   def thunderstone
     @game = 'Thunderstone'
     @sets = Card.find_all_sets_by_game( @game )
+    @sets_to_use = session[:sets_to_use] ||= @sets
+    @sort_type = session[:sort_type] ||= 'alpha'
+    @cards = pick_cards( :game => @game, :sets => @sets_to_use )
+  end
+  
+  def thunderstone_options
+    @game = 'Thunderstone'
+    @sets = Card.find_all_sets_by_game( @game )
     if request.get?
       @sets_to_use = session[:sets_to_use] ||= @sets
       @sort_type = session[:sort_type] ||= 'alpha'
@@ -70,8 +78,6 @@ class CardsController < ApplicationController
       end
       @sort_type = session[:sort_type] = params[:sort_type]
     end
-
-    @cards = pick_cards( :game => @game, :sets => @sets_to_use )
   end
 
   def show
@@ -89,6 +95,7 @@ class CardsController < ApplicationController
     end
 	  @text = @card.text.gsub( /\n/, '<br />' ) if @card.text
   end
+  
 
 private
   def pick_cards( args={} )

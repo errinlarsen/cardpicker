@@ -1,9 +1,15 @@
 <% title 'Main Menu' %>
-<h3>Games:</h3>
 
-<ul>
-	<li><%= link_to 'Dominion', dominion_cardpicker_path %></li>
-  <li><%= link_to 'Thunderstone', thunderstone_cardpicker_path %></li>
-	<li><%= link_to 'Start Player', startplayer_cardpicker_path %></li>
-</ul>
+<div id="topbar"> 
+	<div id="title"> 
+		Card Picker</div> 
+</div>
 
+<div id="tributton">
+  <div class="links">
+    <%= link_to 'Dominion', dominion_cardpicker_path %><%= link_to 'Thunderstone', thunderstone_cardpicker_path %><%= link_to 'Start Player', startplayer_cardpicker_path %>
+  </div>
+</div>
+
+<div id="content">
+</div>

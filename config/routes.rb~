@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   	:controller => :cards,
   	:collection => {
   	  :dominion => [:post, :get],
+  	  :dominion_options => [:post, :get],
   	  :startplayer => [:post, :get],
   	  :thunderstone => [:post, :get]
   	}
