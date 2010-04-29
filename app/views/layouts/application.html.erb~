@@ -4,7 +4,6 @@
 <head>
 	<title>Card Picker - <%= yield( :title ) || "" %></title>
 	<%= javascript_include_tag :defaults %>
-	<meta name="viewport" content="width=device-width" />
 </head>
 
 <body>
