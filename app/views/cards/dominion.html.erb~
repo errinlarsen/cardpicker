@@ -1,7 +1,8 @@
 <% title @game %>
-<%= link_to 'Main Menu', cardpicker_index_path %>
- - <%= link_to 'Shuffle and Pick Again', dominion_cardpicker_path %>
-
+<%= link_to 'Games', cardpicker_index_path %> |
+<%= link_to 'Options', dominion_options_cardpicker_path %>
+<hr />
+<%= link_to 'Shuffle and Pick Again', dominion_cardpicker_path %>
 <hr />
 
 <ul style="list-style-type: none;">
@@ -20,13 +21,17 @@
 <hr />
 
 <% form_tag do %>
-<h3>Set Options:</h3>
+<h3>Theme Options:</h3>
 
   <%= radio_button_tag( :game, "Dominion", @game == 'Dominion' ) %>
     <%= label_tag( :game_dom, "Dominion" ) %><br />
   <%= radio_button_tag( :game, "Zombinion", @game == 'Zombinion' ) %>
     <%= label_tag( :game_zom, "Zombinion" ) %><br />
+  <br />
+  <%= submit_tag 'Change Options' %>
 
+<hr />
+<h3>Set Options:</h3>
   <% for set in @sets %>
     <%= check_box_tag( "sets_to_use[#{set}]", "use", @sets_to_use.include?( set )) %>
     <%= label_tag( "sets_to_use[#{set}]", "#{set}" ) %><br />

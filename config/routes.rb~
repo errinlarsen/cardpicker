@@ -19,7 +19,6 @@ ActionController::Routing::Routes.draw do |map|
   	  :thunderstone => [:post, :get]
   	}
 
-  map.zombinion '/zombinion', :controller => 'card', :action => 'dominion'
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
 

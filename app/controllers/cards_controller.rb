@@ -1,8 +1,8 @@
 class CardsController < ApplicationController
   def index
   end
-
-  def dominion
+  
+  def dominion_options
     if request.get?
       @game = session[:game] ||= 'Dominion'
       @sets = Card.find_all_sets_by_game( @game )
@@ -29,7 +29,19 @@ class CardsController < ApplicationController
       @reactions_required = session[:reactions_required] = params[:reactions_required]
       @oneofeach_required = session[:oneofeach_required] = params[:oneofeach_required]
       @sort_type = session[:sort_type] = params[:sort_type]
+    
+      redirect_to dominion_cardpicker_path 
     end
+  end
+
+  def dominion
+    @game = session[:game] ||= 'Dominion'
+    @sets = Card.find_all_sets_by_game( @game )
+    @sets_to_use = session[:sets_to_use] ||= @sets
+    @randomization = session[:randomization] ||= 'full'
+    @reactions_required = session[:reactions_required] ||= 'no'
+    @oneofeach_required = session[:oneofeach_required] ||= 'no'
+    @sort_type = session[:sort_type] ||= 'alpha'
 
     cards = pick_cards( :game => @game, :num => 10, 
                         :randomization => @randomization,

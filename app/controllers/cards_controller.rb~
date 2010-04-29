@@ -1,8 +1,8 @@
 class CardsController < ApplicationController
   def index
   end
-
-  def dominion
+  
+  def dominion_options
     if request.get?
       @game = session[:game] ||= 'Dominion'
       @sets = Card.find_all_sets_by_game( @game )
@@ -30,6 +30,18 @@ class CardsController < ApplicationController
       @oneofeach_required = session[:oneofeach_required] = params[:oneofeach_required]
       @sort_type = session[:sort_type] = params[:sort_type]
     end
+    
+    redirect_to dominion_cardpicker_path 
+  end
+
+  def dominion
+    @game = session[:game] ||= 'Dominion'
+    @sets = Card.find_all_sets_by_game( @game )
+    @sets_to_use = session[:sets_to_use] ||= @sets
+    @randomization = session[:randomization] ||= 'full'
+    @reactions_required = session[:reactions_required] ||= 'no'
+    @oneofeach_required = session[:oneofeach_required] ||= 'no'
+    @sort_type = session[:sort_type] ||= 'alpha'
 
     cards = pick_cards( :game => @game, :num => 10, 
                         :randomization => @randomization,
@@ -66,7 +78,12 @@ class CardsController < ApplicationController
 	  @card = Card.find( params[:id] )
     @game = @card.game
     if @game == 'Dominion'
-      @img = "http://dominion.diehrstraits.com/scans/#{@card.set.downcase}/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+      if @card.set == 'Envoy' or @card.set == 'Black Market'
+        @img = "http://dominion.diehrstraits.com/scans/promo/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+      else
+        @img = "http://dominion.diehrstraits.com/scans/#{@card.set.downcase}/#{@card.name.downcase.gsub( / /, '' )}.jpg"
+      end
+      
     else
       @img =  "cards/#{@card.name.gsub( / /, '-' )}.png"
     end
