@@ -1,0 +1,48 @@
+<% title @game %>
+
+<div id="topbar"> 
+	<div id="leftnav">
+	  <%= link_to image_tag( 'home.png' ), cardpicker_index_path %><%= link_to 'Back', thunderstone_cardpicker_path %>
+	</div> 
+	<div id="title">Card Picker</div>
+</div>
+
+<div id="content">
+  <% form_tag do %>
+  
+  <ul class="pageitem">
+    <li class="button">
+      <%= submit_tag 'Submit' %>
+    </li>
+  </ul>
+  
+  
+  <span class="graytitle">Sets</span>
+  
+  <ul class="pageitem">
+    <% for set in @sets %>
+      <li class="checkbox">
+        <span class="name">
+          <%= label_tag( "sets_to_use[#{set}]", "#{set}" ) %>
+        </span>
+        <%= check_box_tag( "sets_to_use[#{set}]", "use", @sets_to_use.include?( set )) %>
+      </li>
+    <% end %>
+  </ul>
+
+
+  <span class="graytitle">Sort Village Cards</span>
+  
+  <ul class="pageitem">
+    <li class="radiobutton">
+      <span class="name"><%= label_tag( :sort_type_alpha, "Sort Alphabetically" ) %></span>
+      <%= radio_button_tag( :sort_type, "alpha", @sort_type == 'alpha' ) %>
+    </li>
+    <li class="radiobutton">
+      <span class="name"><%= label_tag( :sort_type_cost, "Sort by Cost" ) %></span>
+      <%= radio_button_tag( :sort_type, "cost", @sort_type == 'cost' ) %>
+    </li>
+  </ul>
+
+  <% end %>
+</div>
